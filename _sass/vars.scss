@@ -1,11 +1,10 @@
-$colour-primary: #061A40;
+$colour-primary: #28465F;
 $colour-primary-lighten: lighten($colour-primary, 10%);
 $colour-primary-darken: darken($colour-primary, 5%);
-$colour-secondary: #006D77;
+$colour-secondary: #b04a82;
 $colour-secondary-lighten: lighten($colour-secondary, 10%);
-$colour-tertiary: #D0D6B5;
-$colour-tertiary-opaque: rgba(208, 214, 181, 0.8);
-$colour-contrast-orange: #942911;
+$colour-light-blue: #E9F1FD;
+$colour-contrast-orange: #d44400;
 $colour-contrast-orange-lighten: lighten($colour-contrast-orange, 10%);
 $colour-accept: #218739;
 $colour-accept-lighten: lighten($colour-accept, 10%);
@@ -17,11 +16,10 @@ html {
   --colour-primary-lighten: #{$colour-primary-lighten};
   --colour-primary-darken: #{$colour-primary-darken};
   --colour-secondary-lighten:  #{$colour-secondary-lighten};
+  --colour-light-blue: #{$colour-light-blue};
   --colour-text-primary: #1e2f60;
   --colour-text-secondary: #52526a;
-  --colour-text-tertiary: #{$colour-tertiary};
-  --colour-tertiary-opaque: #{$colour-tertiary-opaque};
-  --colour-secondary-text: white;
+  --colour-secondary-text: var(--colour-text-primary);
   --button-text: #fff;
   --colour-border: #d6d6e2;
   --colour-light-grey: #f8f8f8;
@@ -40,9 +38,9 @@ html {
 
   --box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.05);
 
-  --font-primary: 'Cabin', serif;
+  --font-primary: "Nunito Sans", sans-serif;
   --font-secondary: var(--font-primary);
-  --font-tertiary: 'Libre Baskerville', serif;
+  --font-tertiary: var(--font-secondary);
 
   --body-font-weight: 400;
   --body-font-size: 18px;
@@ -58,10 +56,10 @@ html {
   --image-strip-box-shadow-colour: rgba(var(--colour-secondary), 0.1);
 
   --footer-bg: var(--colour-primary);
-  --footer-bottom-bg: var(--colour-primary);
+  --footer-bottom-bg: var(--colour-primary-darken);
   --footer-bottom-text: #fff;
   --footer-text-heading: #fff;
-  --footer-text: #fff;
+  --footer-text: rgba(255,255,255, 0.6);
 
   --transition: all 0.2s ease-in-out 0s;
 }
@@ -117,17 +115,17 @@ html {
 
 .form {
   --font-form: var(--font-primary);
-  --form-input-active-bg:  #{$colour-tertiary};
-  --form-input-active-text: var(--colour-primary);
+  --form-input-active-bg: var(--colour-primary);
+  --form-input-active-text: #fff;
   --form-progress-bar: var(--colour-secondary);
   --form-back-button: var(--colour-dark-grey);
   --form-back-button-hover: var(--colour-v-dark-grey);
   //**Form - Submit Button**//
-  --form-button-bg: var(--colour-secondary);
+  --form-button-bg: var(--colour-contrast-orange);
   --form-button-text: #fff;
   --form-button-border: var(--form-button-bg);
   //**Form - Submit Button Hover**//
-  --form-button-hover-bg: var(--colour-secondary-lighten);
+  --form-button-hover-bg: var(--colour-contrast-orange-lighten);
   --form-button-hover-text: #fff;
   --form-button-hover-border: var(--form-button-hover-bg);
 

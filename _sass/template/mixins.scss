@@ -110,7 +110,7 @@ $tablet: (
 @mixin content_styles() {
   h2,
   h3 {
-    color: var(--colour-text-primary);
+    color: inherit;
     line-height: 1;
   }
   strong {

@@ -311,6 +311,9 @@ body.nav-open {
     background-color: var(--colour-tertiary-opaque);
     color: #fff;
   }
+  &--light-blue {
+    background-color: var(--colour-light-blue);
+  }
 }
 
 .video-wrapper {

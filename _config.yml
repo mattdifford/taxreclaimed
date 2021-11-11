@@ -92,7 +92,7 @@ instagram_url:
 
 # Settings for your Storyblok space
 storyblok:
-  token: "L9FP9DcQY06tCbLw2oYNVQtt"
+  token: "EcLhw8tBkVHm2Wz27h2EPAtt"
   # Can be either `draft` or `published`
   version: draft
 

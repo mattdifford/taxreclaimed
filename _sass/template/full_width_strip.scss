@@ -1,10 +1,10 @@
 .full-width-strip {
   text-align: center;
   position: relative;
-  padding: 80px 0;
+  padding: 40px 0;
   background-position: center center;
   background-size: cover;
-  min-height: 400px;
+  min-height: 200px;
   display: flex;
   align-items: center;
   .container {
@@ -14,6 +14,11 @@
   &__content {
     max-width: 60%;
     margin: 0 auto;
+    @include content_styles;
+    ol{
+      display:inline-block;
+      text-align:left;
+    }
     &-left{
       max-width: none;
       text-align: left;
@@ -23,34 +28,8 @@
       @include button();
     }
   }
-  &--dark {
-    color: #fff;
-    h1,
-    h2,
-    h3 {
-      color: #fff;
-    }
-    a{
-      @include button-secondary;
-    }
-    &.full-width-strip--image {
-      &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--full-width-strip-overlay);
-        opacity: 0.8;
-      }
-    }
-    &.full-width-strip--no-image {
-      background: var(--full-width-dark-bg);
-    }
-  }
   @include in_size($xs) {
-    padding: 40px 0;
+    padding: 30px 0;
     &__content {
       max-width: 100%;
     }
