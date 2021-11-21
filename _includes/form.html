@@ -9,7 +9,7 @@
 {% assign fieldset_count = 0%}
 {% assign pixel_id = s_section.pixel_id %}
 <div class="form-wrapper">
-    <form class="form hidden-on-load{%if nested == true%} form--nested{%endif%}" id="form">
+    <form class="form hidden-on-load{%if nested == true%} form--nested{%endif%}" id="form" netlify>
         <input type="hidden" name="api_suffix" value="{{widget.api_suffix}}">
         <input type="hidden" name="redirect_url" value="{{widget.redirect_url}}">
         <input type="hidden" name="postback_url" value="{{widget.postback_url]}}">
@@ -71,9 +71,6 @@
             </div>
             {%-endif -%}
             {%- if forloop.last == true-%}
-            <div class="form__field form__field--checkbox form__field--MarketingPermission">
-                {% include field_marketing_permission.html %}
-            </div>
             {% assign post_submit_text = widget.post_submit_text | replace: '\[submit_text\]', widget.submit_text %}
             {% assign post_submit_text = post_submit_text | markdownify %}
             {% assign post_submit_text = post_submit_text | replace: "<a ", "<a target='_blank' " %}
