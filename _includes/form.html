@@ -8,7 +8,7 @@
 {{widget._editable}}
 {% assign fieldset_count = 0%}
 <div class="form-wrapper">
-    <form class="form hidden-on-load{%if nested == true%} form--nested{%endif%}" id="form" netlify>
+    <form class="form hidden-on-load{%if nested == true%} form--nested{%endif%}" id="form" name="contact" netlify>
         {% if widget.pre_form_text %}
         <div class="form__pre-form-text">
             {{widget.pre_form_text | markdownify}}
@@ -74,7 +74,7 @@
                     <button type="button" class="form__back-button button--medium">Back</button>
                 </div>
                 {% endif %}
-                <div class="form__submit"><button type="button" class="form__submit-button button--medium"
+                <div class="form__submit"><button type="submit" class="form__submit-button button--medium"
                         id="{{widget.title | slugify}}_submit_button">{{widget.submit_text}}</button>
                 </div>
         </fieldset>
@@ -82,7 +82,4 @@
         {%- endfor -%}
     </form>
 </div>
-<script>
-    window.postJqueryScripts.push("/js/bundle-form.js");
-</script>
 {% include style.html blok=widget %}
