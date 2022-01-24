@@ -78,15 +78,8 @@
                         id="{{widget.title | slugify}}_submit_button">{{widget.submit_text}}</button>
                 </div>
         </fieldset>
-        {% if fieldset_count > 1 %}
-        <div class="form__steps">
-            <p>Step 0<span class="form__steps--current">1</span> / 0{{fieldset_count}}</p>
-            <div class="form__progress-bar"><span class="inner" style="width: 0%;"></span></div>
-        </div>
-        {% endif %}
         {%-endif -%}
         {%- endfor -%}
-        <input type="hidden" name="internal_source" value="1">
     </form>
 </div>
 <script>

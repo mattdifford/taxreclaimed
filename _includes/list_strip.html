@@ -6,7 +6,7 @@
 {% assign widget = blok %}
 {% assign nested = false %}
 {%endif %}
-<div class="list-strip{%if blok.colour_scheme.size > 0 %} bg--{{blok.colour_scheme}}{%endif%}">
+<div class="list-strip{%if blok.colour_scheme.size > 0 and nested == false %} bg--{{blok.colour_scheme}}{%endif%}">
 
     <div class="container">
         {% if widget.text.size > 0 %}

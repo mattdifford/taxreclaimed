@@ -72,6 +72,12 @@
                     <a class="footer__social" title="Twitter" href="{{site.twitter_url | absolute_url}}" target="_blank"
                         rel="external noopener"><span class="icon-twitter bg"></span></a>
                     {% endif %}
+                    {% if site.linkedin_url.size > 0 %}
+                    <a class="footer__social" title="Linkedin" href="{{site.linkedin_url | absolute_url}}"
+                        target="_blank" rel="external noopener"><span>
+                            <svg class="linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 510"><g id="Layer_2" data-name="Layer 2"><g id="Capa_1" data-name="Capa 1"><g id="post-linkedin"><path d="M459,0H51A51.15,51.15,0,0,0,0,51V459a51.15,51.15,0,0,0,51,51H459a51.15,51.15,0,0,0,51-51V51A51.15,51.15,0,0,0,459,0ZM153,433.5H76.5V204H153ZM114.75,160.65a45.9,45.9,0,1,1,45.9-45.9A45.71,45.71,0,0,1,114.75,160.65ZM433.5,433.5H357V298.35c0-20.4-17.85-38.25-38.25-38.25S280.5,278,280.5,298.35V433.5H204V204h76.5v30.6c12.75-20.4,40.8-35.7,63.75-35.7,48.45,0,89.25,40.8,89.25,89.25Z" style="fill:#fff"/></g></g></g></svg></a>
+                        </span></a>
+                    {% endif %}
                     {% if site.instagram_url.size > 0 %}
                     <a class="footer__social" title="Instagram" href="{{site.instagram_url | absolute_url}}"
                         target="_blank" rel="external noopener"><span class="icon-instagram bg"></span></a>
