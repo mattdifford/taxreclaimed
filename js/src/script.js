@@ -37,29 +37,8 @@ $(document).ready(function () {
         if ($(this).attr("href").charAt(0) === '#') {
             $("html,body").animate({ scrollTop: $($(this).attr("href")).offset().top - 100 }, 750);
         }
-        if (typeof gtag === 'function') {
-            gtag('event', $(this).attr("href"), { 'event_category': 'Link Click', "event_label": $(this).text() });
-        }
-    });
-    $("span[data-func-val]").each(function () {
-        var f = $(this).attr("data-func-val");
-        var value = window[f]();
-        $(this).text(value);
     });
 
-    $('.ty-banner a').on("click", function () {
-        if (typeof gtag === 'function') {
-            gtag('event', $(this).attr("href"), { 'event_category': 'Thank you page banner click' });
-        }
-    });
-
-
-
-    $('.cms_content a').each(function () {
-        if (($(this).parent('p').text() == $(this).text()) && $(this).find('img').length == 0) {
-            $(this).addClass("button");
-        }
-    });
     $('.header__menu-icon').on("click", function (e) {
         e.preventDefault();
         $('body').toggleClass('nav-open');
@@ -76,36 +55,6 @@ $(document).ready(function () {
     });
 
 });
-
-function getERValue() {
-    var age = localStorage.getItem('age');
-    var prop_value = parseInt(localStorage.getItem('property_value').replace("£", "").replace(",", ""));
-    localStorage.removeItem('age');
-    localStorage.removeItem('property_value');
-    var perc;
-    var table = (function () {
-        var table = null;
-        $.ajax({
-            'async': false,
-            'global': false,
-            'url': "/data/er_age_perc.json",
-            'dataType': "json",
-            'success': function (data) {
-                table = data;
-            }
-        });
-        return table;
-    })();
-    $.each(table, function (index, value) {
-        if (value["age"] == age && typeof perc != "number") {
-            perc = value["perc"];
-        }
-    });
-    var num = Math.round((prop_value / perc) / 100) * 100;
-
-    return '£' + num.toLocaleString();
-}
-
 $.fn.serializeObject = function () {
     var o = {};
     var a = this.serializeArray();

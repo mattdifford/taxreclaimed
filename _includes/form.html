@@ -7,16 +7,8 @@
 {%endif %}
 {{widget._editable}}
 {% assign fieldset_count = 0%}
-{% assign pixel_id = s_section.pixel_id %}
 <div class="form-wrapper">
     <form class="form hidden-on-load{%if nested == true%} form--nested{%endif%}" id="form" netlify>
-        <input type="hidden" name="api_suffix" value="{{widget.api_suffix}}">
-        <input type="hidden" name="redirect_url" value="{{widget.redirect_url}}">
-        <input type="hidden" name="postback_url" value="{{widget.postback_url]}}">
-        <input type="hidden" name="channel_id" value="{{widget.channel_id}}">
-        <input type="hidden" name="channelId" value="{{widget.channel_id}}">
-        <input type="hidden" name="supplierId" value="{{site.default_supplier_id}}">
-        <input type="hidden" name="supplierkey" value="{{site.default_supplier_key}}">
         {% if widget.pre_form_text %}
         <div class="form__pre-form-text">
             {{widget.pre_form_text | markdownify}}
@@ -92,37 +84,11 @@
             <div class="form__progress-bar"><span class="inner" style="width: 0%;"></span></div>
         </div>
         {% endif %}
-        <div class="form__wrapper">
-            <img src="/images/upload/letsencrypt.svg" alt="LetsEncrypt" class="form__le" />
-            <p class="form__disclaimer">
-                <span>Safe</span>
-                <span>Secure</span>
-                <span><a href="/privacy-policy" target="_blank" rel="noopener">Privacy protected</a></span>
-            </p>
-            <div class="form__logos">
-                <img src="/images/transparent.png" class="lazyload" data-src="/images/upload/lock.svg" alt="Secure" />
-                <img src="/images/transparent.png" class="lazyload" data-src="/images/upload/data.svg"
-                    alt="Your data matters" />
-            </div>
-        </div>
         {%-endif -%}
         {%- endfor -%}
-        {% for utm_field in site.utm_fields %}
-        <input type="hidden" name="{{utm_field}}">
-        {% endfor %}
         <input type="hidden" name="internal_source" value="1">
     </form>
 </div>
-<script>
-    {% if widget.confirmation_page %}
-    window.confirmation_page = "{{widget.confirmation_page}}";
-    {% endif %}
-
-    {% if widget.pixel_id.size > 0 %}
-    window.internal_pixel_id = {{ widget.pixel_id }};
-    {% endif %}
-    window.is_form_page = true;
-</script>
 <script>
     window.postJqueryScripts.push("/js/bundle-form.js");
 </script>
