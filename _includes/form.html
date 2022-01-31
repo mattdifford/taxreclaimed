@@ -8,7 +8,7 @@
 {{widget._editable}}
 {% assign fieldset_count = 0%}
 <div class="form-wrapper">
-    <form class="form hidden-on-load{%if nested == true%} form--nested{%endif%}" id="form" name="contact" netlify>
+    <form class="form hidden-on-load{%if nested == true%} form--nested{%endif%}" id="form" name="contact" netlify action="/thankyou">
         {% if widget.pre_form_text %}
         <div class="form__pre-form-text">
             {{widget.pre_form_text | markdownify}}
