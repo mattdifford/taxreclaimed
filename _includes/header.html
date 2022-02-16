@@ -27,7 +27,7 @@
                                 {%- endif -%}
                                 {%- if forloop.first -%}
                                 <div class="header__nav-item first">
-                                        <a href="{{link}}">{{item.link_text}}</a>
+                                        <a href="{{link}}" {% if link contains "mailto:" %} class="button--medium"{% endif %}>{{item.link_text}}</a>
                                         <div class="header__sub-nav">
                                                 <div class="header__sub-nav-inner">
                                                         {%- elsif item.is_top_level == true -%}
@@ -35,7 +35,7 @@
                                         </div>
                                 </div>
                                 <div class="header__nav-item top_level">
-                                        <a href="{{link}}">{{item.link_text}}</a>
+                                        <a href="{{link}}"{% if link contains "mailto:" %} class="button--medium"{% endif %}>{{item.link_text}}</a>
                                         <div class="header__sub-nav">
                                                 <div class="header__sub-nav-inner">
                                                         {%- else -%}

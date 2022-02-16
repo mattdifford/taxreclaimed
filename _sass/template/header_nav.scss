@@ -9,6 +9,10 @@
         > a {
           color: var(--header-nav-text);
           transition: var(--transition);
+          &.button {
+            background: var(--colour-secondary);
+            color: #fff;
+          }
           &:hover {
             color: var(--header-nav-text-hover);
           }
@@ -52,7 +56,8 @@
         height: 0;
         border-style: solid;
         border-width: 0 10px 10px 10px;
-        border-color: transparent transparent var(--header-sub-nav-bg) transparent;
+        border-color: transparent transparent var(--header-sub-nav-bg)
+          transparent;
         position: absolute;
         top: 5px;
         left: 50%;
