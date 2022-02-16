@@ -9,7 +9,7 @@
         > a {
           color: var(--header-nav-text);
           transition: var(--transition);
-          &.button {
+          &.button--medium {
             background: var(--colour-secondary);
             color: #fff;
           }
