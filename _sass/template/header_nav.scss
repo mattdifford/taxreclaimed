@@ -14,6 +14,16 @@
             color: #fff;
             border-color: transparent;
           }
+          &[href="/nest"] {
+            &:after {
+              content: "";
+              width: 20px;
+              height: 20px;
+              background-image: url("/images/nest.svg");
+              background-position: center;
+              background-repeat: no-repeat;
+            }
+          }
           &:hover {
             color: var(--header-nav-text-hover);
           }
