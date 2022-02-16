@@ -12,7 +12,7 @@
           &.button--medium {
             background: var(--colour-secondary);
             color: #fff;
-            border-color: var(--colour-secondary);
+            border-color: transparent;
           }
           &:hover {
             color: var(--header-nav-text-hover);
